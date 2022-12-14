@@ -30,7 +30,16 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+# By default, INSTALLED_APPS contains the following apps, all of which come with Django:
+# django.contrib.admin – The admin site. 
+# django.contrib.auth – An authentication system.
+# django.contrib.contenttypes – A framework for content types.
+# django.contrib.sessions – A session framework.
+# django.contrib.messages – A messaging framework.
+# django.contrib.staticfiles – A framework for managing static files.
+
 INSTALLED_APPS = [
+    "displays",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
