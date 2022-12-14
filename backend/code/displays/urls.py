@@ -17,11 +17,19 @@ from django.urls import path
 from . import views
 
 
+# How does Django differentiate the URL names between them? For example, the displays app has a detail view, and so might a blog app that is in the same project. How does one make it so that Django knows which app view to create for a url when using the {% url %} template tag?
+# The answer is to add namespaces to your URLconf. Use app_name to set the application namespace.
+
+app_name = 'displays'
 urlpatterns = [
 
-    # Path will call the index function in views.py, doesn't have to be called index
+    # Path will call the index function in views.py.
     path('', views.index, name='index'),
 
-    # Test path, this creates the route of /displays/test that calls the index function in views.py
-    # path('test', views.index, name='index'),
+    # Path will call the detail function in views.py, passing the display UUID that is included in the URL.
+    # The 'name' value is called by the {% url %} template tag. This way you don't have to hardcode the URL into the template.
+    path('<uuid:display_uuid>/', views.detail, name='detail'),
+
+    # Path will call the create function in views.py.
+    path('create/', views.create, name='create'),
 ]

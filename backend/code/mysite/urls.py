@@ -31,7 +31,7 @@ urlpatterns = [
     # path() argument: name - (optional) Naming your URL lets you refer to it unambiguously from elsewhere in Django, especially from within templates. This powerful feature allows you to make global changes to the URL patterns of your project while only touching a single file.
 
     # Points the root URLconf at the displays.urls module. In displays/urls.py, add an import for django.urls.include and insert an include() in the urlpatterns list.
-    path('displays/', include('displays.urls')),
+    path("displays/", include('displays.urls')),
     # TODO: Add redirect for '' path
     # path('', include('displays.urls')),
     # Points to the default Admin page.

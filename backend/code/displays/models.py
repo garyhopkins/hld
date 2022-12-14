@@ -16,7 +16,7 @@ class Display(models.Model):
 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)  
     address1 = models.CharField(max_length=255)
-    address2 = models.CharField(max_length=255)
+    address2 = models.CharField(max_length=255, blank=True)
     city = models.CharField(max_length=255)
     state_province = models.CharField(max_length=255)
     zip = models.CharField(max_length=255)
@@ -31,12 +31,18 @@ class Display(models.Model):
     deleted = models.BooleanField(default=False)
     free_entrance = models.BooleanField(default=True)
     opening_date = models.DateField()
-    closing_data = models.DateField()
+    closing_date = models.DateField()
     updated_date = models.DateField()
     description = models.TextField()
-    viewer_instructions = models.TextField()
+    viewer_instructions = models.TextField(blank=True)
     hours = models.TextField()
-    website_url = models.TextField()
-    facebook_url = models.TextField()
-    youtube_url = models.TextField()    
-    remotefalcon_url = models.TextField()
+    website_url = models.TextField(blank=True)
+    facebook_url = models.TextField(blank=True)
+    youtube_url = models.TextField(blank=True)    
+    remotefalcon_url = models.TextField(blank=True)
+
+# It’s important to add __str__() methods to your models as a helpful representation, not only for your own convenience when dealing with the interactive prompt, but also because objects’ 
+# representations are used throughout Django’s automatically-generated admin.
+
+    def __str__(self):
+        return self.display_name
