@@ -1,21 +1,11 @@
-{{ displays }}
+{% extends "displays/base.html" %}
 
-<form method="post">
-    <ul>
-      <li>
-        <label for="display_name">Display Name:</label>
-        <input type="text" id="display_name" name="display_name" />
-      </li>
-      <li>
-        <label for="address1">Address1:</label>
-        <input type="text" id="address1" name="address1" />
-      </li>
-      <li>
-        <label for="address2">Address2:</label>
-        <input type="text" id="address2" name="address2">
-      </li>
-    </ul>
-    <li class="button">
-        <button type="submit">Submit</button>
-      </li>
-  </form>
+{% block content %}
+
+<form action="{% url 'displays:create' %}" method="post">
+  {% csrf_token %}
+  {{ form }}  
+  <input type="submit" value="Submit">
+</form>
+
+{% endblock content %}

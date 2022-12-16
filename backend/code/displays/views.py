@@ -1,5 +1,7 @@
 from django.shortcuts import get_object_or_404, render
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseNotAllowed, HttpResponseRedirect
+
+from .forms import CreateDisplayForm
 
 from .models import Display
 
@@ -30,4 +32,18 @@ def detail(request, display_uuid):
 
 # Displays the create_display template which has a form to submit a new display record
 def create(request):
-    return render(request, 'displays/create.html')
+    print(request.method)
+    if request.method == 'POST':
+        form = CreateDisplayForm(request.POST)
+        if form.is_valid():
+            # print (form.cleaned_data)
+            # print(request.POST)
+            # Save to database
+            form.save()
+            return HttpResponseRedirect('/')
+
+    else:
+        form = CreateDisplayForm()
+
+    return render(request, 'displays/create.html', {'form': form})
+   

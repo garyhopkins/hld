@@ -1,3 +1,8 @@
+{% extends "displays/base.html" %}
+
+{% block content %}
+
+Display Listing
 {% if displays %}
     <ul>
     {% for row in displays %}
@@ -7,3 +12,5 @@
 {% else %}
     <p>No displays are available.</p>
 {% endif %}
+
+{% endblock content %}
