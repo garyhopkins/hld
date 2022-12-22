@@ -42,7 +42,7 @@ def create(request):
     if request.method == 'POST':
         form = CreateDisplayForm(request.POST)
         if form.is_valid():
-            # print (form.cleaned_data)
+            # print(form.cleaned_data)
             # print(request.POST)
             # Save to database
             form.save()
