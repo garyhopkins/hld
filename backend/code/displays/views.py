@@ -13,17 +13,14 @@ from .models import Display
 
 # Displays the 
 def index(request):
-    # displays = Display.objects.order_by('display_name')
-
-    # context = {'displays': displays}
     return render(request, 'displays/index.html')
 
 # Gets iterable object and passes to the display_list.html template so it can be iterated through
-def results(request):
+def listing(request):
     displays = Display.objects.order_by('display_name')
 
     context = {'displays': displays}
-    return render(request, 'displays/results.html', context)
+    return render(request, 'displays/listing.html', context)
 
 # It’s a very common idiom to use get() and raise Http404 if the object doesn’t exist. Django provides a shortcut for this using get_object_or_404().
 # The get_object_or_404() function takes a Django model as its first argument and an arbitrary number of keyword arguments, which it passes to the get() function of the model’s manager. It raises Http404 if the object doesn’t exist.

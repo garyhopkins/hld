@@ -2,12 +2,11 @@
 
 {% block content %}
 
-<H1>THIS IS THE DISPLAY DETAILS PAGE FOR A SINGLE DISPLAY</H1>
+<H1>THIS IS THE DISPLAY DETAILS PAGE FOR {{ displays.display_name }}</H1>
 
 {# This is a Django template comment #}
 
-<div>
-    Display Name: {{ displays.display_name }}<br>
+<div style="color:red;">
     Address1: {{ displays.address1 }}<br>
     Address2: {{ displays.address2 }}<br>
     City: {{ displays.city }}<br>

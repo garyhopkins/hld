@@ -40,5 +40,5 @@ urlpatterns = [
     path('<uuid:display_uuid>/update/', views.update, name="update"),
 
     # Path will call the display_list function in views.py
-    path('results/', views.results, name="results"),
+    path('listing/', views.listing, name="listing"),
 ]
