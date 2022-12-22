@@ -32,4 +32,13 @@ urlpatterns = [
 
     # Path will call the create function in views.py.
     path('create/', views.create, name='create'),
+
+    # Path will call the delete function in views.py.
+    path('delete/<uuid:display_uuid>/', views.delete, name='delete'),
+
+    # Path will call the update function in views.py
+    path('<uuid:display_uuid>/update/', views.update, name="update"),
+
+    # Path will call the display_list function in views.py
+    path('results/', views.results, name="results"),
 ]

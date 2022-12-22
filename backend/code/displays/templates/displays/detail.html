@@ -6,12 +6,24 @@
 
 {# This is a Django template comment #}
 
-Display Name: {{ displays.display_name }}<br>
-Address1: {{ displays.address1 }}<br>
-Address2: {{ displays.address2 }}<br>
-City: {{ displays.city }}<br>
-ST/Province: {{ displays.state_province }}<br>
-ZIP: {{ displays.zip }}<br>
-Country: {{ displays.country }}
+<div>
+    Display Name: {{ displays.display_name }}<br>
+    Address1: {{ displays.address1 }}<br>
+    Address2: {{ displays.address2 }}<br>
+    City: {{ displays.city }}<br>
+    ST/Province: {{ displays.state_province }}<br>
+    ZIP: {{ displays.zip }}<br>
+    Country: {{ displays.country }}<br>
+    Deleted: {{ displays.deleted }}
+</div>
+<br>
+<div>
+    <form action="{% url 'displays:update' displays.id %}">
+        <input type="submit" value="Edit">
+    </form>
+    <form action="{% url 'displays:delete' displays.id %}">
+        <input type="submit" value="Delete">
+    </form>
+</div>
 
 {% endblock content %}

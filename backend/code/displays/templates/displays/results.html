@@ -1,0 +1,15 @@
+{% extends "displays/base.html" %}
+
+{% block content %}
+
+{% if displays %}
+<ul>
+    {% for row in displays %}
+    <li><a href="{% url 'displays:detail' row.id %}">{{ row.display_name }} - {{ row.city }}, {{ row.state_province}}</a></li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No displays are available.</p>
+{% endif %}
+
+{% endblock content %}

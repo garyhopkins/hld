@@ -35,7 +35,7 @@ class Display(models.Model):
     updated_date = models.DateField()
     description = models.TextField()
     viewer_instructions = models.TextField(blank=True)
-    hours = models.TextField()
+    hours = models.TextField(blank=True)
     website_url = models.TextField(blank=True)
     facebook_url = models.TextField(blank=True)
     youtube_url = models.TextField(blank=True)    
