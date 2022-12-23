@@ -15,15 +15,15 @@ import uuid
 class Display(models.Model):
 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)  
+    display_name = models.CharField(max_length=255)
+    location_name = models.CharField(max_length=255)
+    location_type = models.CharField(max_length=255)
     address1 = models.CharField(max_length=255)
     address2 = models.CharField(max_length=255, blank=True)
     city = models.CharField(max_length=255)
     state_province = models.CharField(max_length=255)
     zip = models.CharField(max_length=255)
     country = models.CharField(max_length=255)
-    location_name = models.CharField(max_length=255)
-    display_name = models.CharField(max_length=255)
-    type = models.CharField(max_length=255)
     holiday = models.CharField(max_length=255)
     style = models.CharField(max_length=255)
     hide_address = models.BooleanField(default=False)

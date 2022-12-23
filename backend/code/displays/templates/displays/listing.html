@@ -3,11 +3,42 @@
 {% block content %}
 
 {% if displays %}
-<ul>
+
+<table>
+    <thead>
+        <tr>
+            <th>Display Name</th>
+            <th>City</th>
+            <th>State/Province</th>
+            <th>Type</th>
+            <th>Address</th>
+            <th>Holiday</th>
+            <th>Display Style</th>
+            <th>Last Updated</th>
+            <th>View Details</th>
+        </tr>
+    </thead>
     {% for row in displays %}
-    <li><a href="{% url 'displays:detail' row.id %}">{{ row.display_name }} - {{ row.city }}, {{ row.state_province}}</a></li>
+    <tbody>
+        <tr>
+            <td>{{row.display_name}}
+            <td>{{row.city}}</td>
+            <td>{{row.state_province}}</td>
+            <td>{{row.location_type}}</td>
+            <td>{{row.address1}}</td>
+            <td>{{row.holiday}}</td>
+            <td>{{row.style}}</td>
+            <td>{{row.last_updated}}</td>
+            <td><a href="{% url 'displays:detail' row.id %}">View Details</a></td>
+        </tr>
+    </tbody>
+
     {% endfor %}
-</ul>
+</table>
+
+
+
+
 {% else %}
 <p>No displays are available.</p>
 {% endif %}

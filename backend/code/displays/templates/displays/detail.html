@@ -2,19 +2,96 @@
 
 {% block content %}
 
-<H1>THIS IS THE DISPLAY DETAILS PAGE FOR {{ displays.display_name }}</H1>
+<H1>Display details for {{ displays.display_name }}</H1>
 
-{# This is a Django template comment #}
-
-<div style="color:red;">
-    Address1: {{ displays.address1 }}<br>
-    Address2: {{ displays.address2 }}<br>
-    City: {{ displays.city }}<br>
-    ST/Province: {{ displays.state_province }}<br>
-    ZIP: {{ displays.zip }}<br>
-    Country: {{ displays.country }}<br>
-    Deleted: {{ displays.deleted }}
-</div>
+<table>
+    <tbody>
+        <tr>
+            <td>Location name:</td>
+            <td>{{ displays.location_name }}</td>
+        </tr>
+        <tr>
+            <td>Location type:</td>
+            <td>{{ displays.location_type }}</td>
+        </tr>
+        <tr>
+            <td>Address1:</td>
+            <td>{{ displays.address1 }}</td>
+        </tr>
+        <tr>
+            <td>Address2:</td>
+            <td>{{ displays.address2 }}</td>
+        </tr>
+        <tr>
+            <td>City:</td>
+            <td>{{ displays.city }}</td>
+        </tr>
+        <tr>
+            <td>State/Province:</td>
+            <td>{{ displays.state_province }}</td>
+        </tr>
+        <tr>
+            <td>ZIP:</td>
+            <td>{{ displays.zip }}</td>
+        </tr>
+        <tr>
+            <td>Country:</td>
+            <td>{{ displays.country }}</td>
+        </tr>
+        <tr>
+            <td>Holiday:</td>
+            <td>{{ displays.holiday }}</td>
+        </tr>
+        <tr>
+            <td>Style:</td>
+            <td>{{ displays.style }}</td>
+        </tr>
+        <tr>
+            <td>Free Entrance:</td>
+            <td>{{ displays.free_entrance }}</td>
+        </tr>
+        <tr>
+            <td>Opening Date:</td>
+            <td>{{ displays.opening_date }}</td>
+        </tr>
+        <tr>
+            <td>Closing Date:</td>
+            <td>{{ displays.closing_date }}</td>
+        </tr>
+        <tr>
+            <td>Updated Date:</td>
+            <td>{{ displays.updated_date }}</td>
+        </tr>
+        <tr>
+            <td>Description:</td>
+            <td>{{ displays.description }}</td>
+        </tr>
+        <tr>
+            <td>Viewer Instructions:</td>
+            <td>{{ displays.viewer_instructions }}</td>
+        </tr>
+        <tr>
+            <td>Hours:</td>
+            <td>{{ displays.hours }}</td>
+        </tr>
+        <tr>
+            <td>Website:</td>
+            <td>{{ displays.website_url }}</td>
+        </tr>
+        <tr>
+            <td>Facebook:</td>
+            <td>{{ displays.facebook_url }}</td>
+        </tr>
+        <tr>
+            <td>YouTube:</td>
+            <td>{{ displays.youtube_url }}</td>
+        </tr>
+        <tr>
+            <td>Remote Falcon:</td>
+            <td>{{ displays.remotefalcon_url }}</td>
+        </tr>
+    </tbody>
+</table>
 <br>
 <div>
     <form action="{% url 'displays:update' displays.id %}">
