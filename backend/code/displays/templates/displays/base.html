@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="container">
-        <header class="header">
+        <header>
             <a href="{% url 'displays:index' %}">Home</a> |
             <a href="{% url 'displays:listing' %}">Display Listing</a> |
             <a href="{% url 'displays:create' %}">Add Display</a>
@@ -20,7 +20,7 @@
         {% block content %} {% endblock content %}
         </main>
 
-        <footer class="footer">Made with &#9829 in Minneapolis, MN</footer>
+        <footer>Made with &#9829 in Minneapolis, MN</footer>
     </div>
 </body>
 </html>

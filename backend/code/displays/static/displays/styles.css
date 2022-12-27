@@ -1,8 +1,12 @@
-.header {
+body {
+    margin: 0px;
+}
+
+header {
     background-color: rgb(203, 253, 203);
 }
 
-.footer {
+footer {
     background-color: red;
 }
 
