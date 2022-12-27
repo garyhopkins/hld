@@ -2,12 +2,44 @@ body {
     margin: 0px;
 }
 
-header {
-    background-color: rgb(203, 253, 203);
+li {
+    display: inline;
 }
 
 footer {
     background-color: red;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(203, 253, 203);
+}
+
+li {
+    float: left;
+}
+  
+li a {
+    display: block;
+    padding: 8px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: rgb(199, 190, 190);
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
 table {
@@ -21,6 +53,13 @@ th {
     border: 1px solid black;
     padding: 2px;
     text-align: center;
+}
+
+main {
+    text-align: center;
+    border-style: solid;
+    padding: 25px;
+    border-width: 2px;
 }
 
 .helptext {

@@ -9,18 +9,22 @@
     <link rel="stylesheet" href="{% static 'displays/styles.css' %}" />
 </head>
 <body>
-    <div class="container">
-        <header>
-            <a href="{% url 'displays:index' %}">Home</a> |
-            <a href="{% url 'displays:listing' %}">Display Listing</a> |
-            <a href="{% url 'displays:create' %}">Add Display</a>
-        </header>
+    <header>
+        <img class="center" src="{% static 'displays/hld_logo.jpg' %}">
+    </header>
 
-        <main>
-        {% block content %} {% endblock content %}
-        </main>
+    <nav>
+        <ul>
+            <li><a href="{% url 'displays:index' %}">HOME</a></li>
+            <li><a href="{% url 'displays:listing' %}">DISPLAY LISTING</a></li>
+            <li><a href="{% url 'displays:create' %}">ADD DISPLAY</a></li>
+        </ul>
+    </nav>
 
-        <footer>Made with &#9829 in Minneapolis, MN</footer>
-    </div>
+    <main>
+    {% block content %} {% endblock content %}
+    </main>
+
+    <footer>Made with &#9829 in Minneapolis, MN</footer>
 </body>
 </html>
