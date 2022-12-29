@@ -62,3 +62,14 @@ I also wwanted to learn more about Docker, which is why I decided to package my 
 * Open browser and browse to http://localhost:8080/
 
 ## Future enhancements
+
+* Do not display deleted displays in listings
+* Ability to sort listings
+* Ability to search/filter listings, including ability to search for displays that are X miles from Address/ZIP
+* View listings on a map
+* Return 404 if the details route is being requested for a display that is marked deleted
+* User management/authentication
+* Ability for users to only add/edit/delete their own listings
+* Ability for user to create and manage lists, such as favorites, etc.
+* Ability for file management, so users can upload photos of their displays and they can be shown on the display details page
+* Ability to embded videos (YouTube/Vimeo) so they can be shown/played on the display details page
