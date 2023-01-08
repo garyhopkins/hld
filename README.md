@@ -1,4 +1,4 @@
-# CS50x (Fall 2022) Final Project - HolidayLightDisplays website
+#CS50x (Fall 2022) Final Project - HolidayLightDisplays website
 
 ## Description:
 
